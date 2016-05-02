@@ -1,0 +1,6 @@
+framework module PasscodeView {
+  umbrella header "PasscodeView-umbrella.h"
+
+  export *
+  module * { export * }
+}

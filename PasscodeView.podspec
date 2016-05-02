@@ -1,42 +1,21 @@
-#
-# Be sure to run `pod lib lint PasscodeView.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "PasscodeView"
   s.version          = "0.1.0"
-  s.summary          = "A short description of PasscodeView."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = "An iOS inspired secure passcode entry view."
+  
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    PasscodeView is an easy to use and confiure custom view that is perfect for
+    displaying results of a secure entry field like a PIN or password. It is inspired by the
+    iOS passcode screen that is used for unlocking devices. It is both IBDesignable and IBInspectable
+    which makes it simple to use and configure for your own project.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/PasscodeView"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/pinnrepo/PasscodeView"
   s.license          = 'MIT'
   s.author           = { "David Westerhoff" => "dmwesterhoff@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/PasscodeView.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/pinnrepo/PasscodeView.git", :tag => s.version.to_s }
+  s.ios.deployment_target = '9.0'
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'PasscodeView/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PasscodeView' => ['PasscodeView/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = 'PasscodeView/*'
+  s.frameworks = 'UIKit'
 end

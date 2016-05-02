@@ -1,0 +1,14 @@
+PODS:
+  - PasscodeView (0.1.0)
+
+DEPENDENCIES:
+  - PasscodeView (from `../`)
+
+EXTERNAL SOURCES:
+  PasscodeView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PasscodeView: 2de0541ffe1133859eec8452ec03995538b7183e
+
+COCOAPODS: 0.39.0
