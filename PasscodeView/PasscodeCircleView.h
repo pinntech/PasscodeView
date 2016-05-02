@@ -1,4 +1,4 @@
-// PNViewController.h
+// PasscodeCircleView.h
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,8 +19,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
-@interface PNViewController : UIViewController
+IB_DESIGNABLE
+/**
+ *  A UI element which simply draws a circle, it can either be filled which is
+ *  a solid circle, or unfilled which is a circle with a border.
+ */
+@interface PasscodeCircleView : UIView
+
+/**
+ *  The border width of the circle view
+ */
+@property (nonatomic, assign) IBInspectable CGFloat borderWidth;
+
+/**
+ *  The fill on the circle view, if true the circle will be filled with the tint
+ *  color if not it will be simply bordered with the tint color
+ */
+@property (nonatomic, assign) IBInspectable BOOL filled;
 
 @end

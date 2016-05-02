@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PasscodeView: 2de0541ffe1133859eec8452ec03995538b7183e
+  PasscodeView: ebf04bb1e1f66e37c72f4314b459f586ce1d506f
 
 COCOAPODS: 0.39.0
