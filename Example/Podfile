@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PasscodeView_Example', :exclusive => true do
+  pod 'PasscodeView', :path => '../'
+end
+
+target 'PasscodeView_Tests', :exclusive => true do
+  pod 'PasscodeView', :path => '../'
+
+  
+end
