@@ -12,7 +12,7 @@
 PasscodeView is an input view for secure passcode entry, and is inspired from 
 the iOS 7+ unlock screen. It is easy to use and best of all fully IBDesignable
 and IBInspectable. That is you can fully configure the look and feel of your
-custom PasscodeView in seconds.
+custom PasscodeView in seconds right in interface builder.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/PasscodeViewExample.gif">
@@ -146,7 +146,7 @@ For complete release notes check out the [changelog](https://github.com/pinnrepo
 -----------
 
 * Comprehensive testing suite
-* Additional label customization options
+* Additional customization options
 
 ### License
 -----------
