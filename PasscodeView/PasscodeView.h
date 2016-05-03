@@ -21,8 +21,6 @@
 
 #import <Foundation/Foundation.h>
 
-//@protocol PasscodeViewDataSource;
-
 IB_DESIGNABLE
 /**
  *  A view that displays passcode placeholder circles, which can then be either
@@ -40,6 +38,12 @@ IB_DESIGNABLE
  *  The length of the passcode entry, tells the view how many circles to draw
  */
 @property (nonatomic, assign) IBInspectable NSUInteger length;
+
+/**
+ *  The amount of characters that have been entered, the value can be 0-[length]
+ *  where 0 is an empty passcode view and length will fill the passcode view
+ */
+@property (nonatomic, assign) IBInspectable NSUInteger progress;
 
 /**
  *  The size of the circles in the view

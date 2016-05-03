@@ -26,6 +26,15 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     // Override point for customization after application launch.
+    NSShadow* shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor blackColor];
+    shadow.shadowOffset = CGSizeMake(0, 0);
+    NSDictionary* titleAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor],
+        NSShadowAttributeName : shadow,
+        NSFontAttributeName : [UIFont fontWithName:@"TrebuchetMS" size:20] };
+    [[UINavigationBar appearance] setTitleTextAttributes:titleAttributes];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor darkGrayColor]];
+
     return YES;
 }
 

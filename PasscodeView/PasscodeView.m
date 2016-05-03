@@ -22,7 +22,9 @@
 #import "PasscodeCircleView.h"
 #import "PasscodeView.h"
 
-@implementation PasscodeView
+@implementation PasscodeView {
+    NSMutableArray* circleViews;
+}
 
 #pragma mark - Superclass
 - (instancetype)initWithFrame:(CGRect)frame
@@ -71,6 +73,7 @@
 - (void)setLength:(NSUInteger)length
 {
     _length = length;
+    [circleViews removeAllObjects];
     for (UIView* subview in self.arrangedSubviews) {
         [subview removeFromSuperview];
     }
@@ -80,6 +83,22 @@
         circleView.borderWidth = self.borderWidth;
         circleView.tintColor = self.tintColor;
         [self addArrangedSubview:circleView];
+        [circleViews addObject:circleView];
+    }
+}
+
+- (void)setProgress:(NSUInteger)progress
+{
+    _progress = progress;
+    if (progress > self.length) {
+        // Gave too large progress so setting to max, which is length
+        _progress = self.length;
+    }
+    for (NSUInteger i = 0; i < _progress; i++) {
+        [self.arrangedSubviews[i] setFilled:YES];
+    }
+    for (NSUInteger i = progress; i < self.length; i++) {
+        [self.arrangedSubviews[i] setFilled:NO];
     }
 }
 
@@ -92,6 +111,7 @@
         circleView.borderWidth = self.borderWidth;
         circleView.tintColor = self.tintColor;
         [self addArrangedSubview:circleView];
+        [circleViews addObject:circleView];
     }
     self.axis = UILayoutConstraintAxisHorizontal;
     self.distribution = UIStackViewDistributionEqualSpacing;

@@ -20,11 +20,11 @@
 // THE SOFTWARE.
 
 #import "PNViewController.h"
-#import <PasscodeView/PasscodeCircleView.h>
+#import <PasscodeView/PasscodeView.h>
 
-@interface PNViewController ()
-@property (weak, nonatomic) IBOutlet PasscodeCircleView* circleView;
-
+@interface PNViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField* textField;
+@property (weak, nonatomic) IBOutlet PasscodeView* passcodeView;
 @end
 
 @implementation PNViewController
@@ -32,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.textField.delegate = self;
+    [self.textField becomeFirstResponder];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -39,6 +41,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string
+{
+    NSString* fullString = [NSString stringWithFormat:@"%@%@", textField.text, string];
+    if ([string isEqualToString:@""]) {
+        fullString = [fullString substringToIndex:[fullString length] - 1];
+    }
+    [self.passcodeView setProgress:fullString.length];
+    return YES;
 }
 
 @end
