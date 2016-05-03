@@ -23,7 +23,13 @@
 
 //@protocol PasscodeViewDataSource;
 
-@interface PasscodeView : NSObject
+IB_DESIGNABLE
+/**
+ *  A view that displays passcode placeholder circles, which can then be either
+ *  filled or unfilled based on a data source. The view can be customized based
+ *  on length, tint color, or border width
+ */
+@interface PasscodeView : UIStackView
 
 /**
  *  The border width of the passcode circles
@@ -34,5 +40,15 @@
  *  The length of the passcode entry, tells the view how many circles to draw
  */
 @property (nonatomic, assign) IBInspectable NSUInteger length;
+
+/**
+ *  The size of the circles in the view
+ */
+@property (nonatomic, assign) IBInspectable CGFloat size;
+
+/**
+ *  The spacing between the circles
+ */
+@property (nonatomic, assign) IBInspectable CGFloat spacing;
 
 @end

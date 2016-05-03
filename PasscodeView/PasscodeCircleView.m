@@ -21,9 +21,20 @@
 
 #import "PasscodeCircleView.h"
 
-@implementation PasscodeCircleView
+@implementation PasscodeCircleView {
+    UIView* circleView;
+}
 
 #pragma mark - Superclass
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -44,10 +55,15 @@
 
 - (void)prepareForInterfaceBuilder
 {
-    self.layer.cornerRadius = self.frame.size.width / 2;
-    self.layer.borderWidth = self.borderWidth;
-    self.layer.borderColor = [[self tintColor] CGColor];
+    circleView.layer.cornerRadius = self.size / 2;
+    circleView.layer.borderWidth = self.borderWidth;
+    circleView.layer.borderColor = [[self tintColor] CGColor];
     [self setFilled:self.filled];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    return CGSizeMake(self.size, self.size);
 }
 
 #pragma mark - Public
@@ -55,36 +71,50 @@
 {
     _filled = filled;
     if (filled) {
-        self.backgroundColor = self.tintColor;
+        circleView.backgroundColor = self.tintColor;
     }
     else {
-        self.backgroundColor = [UIColor clearColor];
+        circleView.backgroundColor = [UIColor clearColor];
     }
 }
 
 - (void)setBorderWidth:(CGFloat)borderWidth
 {
     _borderWidth = borderWidth;
-    self.layer.borderWidth = borderWidth;
+    circleView.layer.borderWidth = borderWidth;
 }
 
 - (void)setTintColor:(UIColor*)tintColor
 {
     [super setTintColor:tintColor];
-    self.layer.borderColor = [[self tintColor] CGColor];
+    circleView.layer.borderColor = [[self tintColor] CGColor];
     if (self.filled) {
-        self.backgroundColor = self.tintColor;
+        circleView.backgroundColor = self.tintColor;
     }
+}
+
+- (void)setSize:(CGFloat)size
+{
+    _size = size;
+    [circleView setFrame:CGRectMake(0, 0, self.size, self.size)];
+    circleView.center = [self convertPoint:self.center fromView:self.superview];
+    circleView.layer.cornerRadius = self.size / 2;
+    [self invalidateIntrinsicContentSize];
 }
 
 #pragma mark - Private
 - (void)baseInit
 {
     self.filled = NO;
-    self.layer.backgroundColor = [[self tintColor] CGColor];
-    self.layer.cornerRadius = self.frame.size.width / 2;
-    self.layer.borderWidth = self.borderWidth;
-    self.layer.borderColor = [[self tintColor] CGColor];
+
+    circleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.size, self.size)];
+    [circleView setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
+    circleView.center = [self convertPoint:self.center fromView:self.superview];
+    circleView.layer.backgroundColor = [[UIColor clearColor] CGColor];
+    circleView.layer.cornerRadius = self.size / 2;
+    circleView.layer.borderWidth = self.borderWidth;
+    circleView.layer.borderColor = [[self tintColor] CGColor];
+    [self addSubview:circleView];
 }
 
 @end

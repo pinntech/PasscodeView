@@ -19,8 +19,84 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "PasscodeCircleView.h"
 #import "PasscodeView.h"
 
 @implementation PasscodeView
+
+#pragma mark - Superclass
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder*)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
+#pragma mark - Public
+- (void)setSize:(CGFloat)size
+{
+    _size = size;
+    for (PasscodeCircleView* circleView in self.arrangedSubviews) {
+        circleView.size = size;
+    }
+}
+
+- (void)setTintColor:(UIColor*)tintColor
+{
+    [super setTintColor:tintColor];
+    for (PasscodeCircleView* circleView in self.arrangedSubviews) {
+        circleView.tintColor = tintColor;
+    }
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth
+{
+    _borderWidth = borderWidth;
+    for (PasscodeCircleView* circleView in self.arrangedSubviews) {
+        circleView.borderWidth = borderWidth;
+    }
+}
+
+- (void)setLength:(NSUInteger)length
+{
+    _length = length;
+    for (UIView* subview in self.arrangedSubviews) {
+        [subview removeFromSuperview];
+    }
+    for (NSUInteger i = 0; i < length; i++) {
+        PasscodeCircleView* circleView = [[PasscodeCircleView alloc] initWithFrame:CGRectMake(0, 0, self.size, self.size)];
+        circleView.size = self.size;
+        circleView.borderWidth = self.borderWidth;
+        circleView.tintColor = self.tintColor;
+        [self addArrangedSubview:circleView];
+    }
+}
+
+#pragma mark - Private
+- (void)baseInit
+{
+    for (NSUInteger i = 0; i < self.length; i++) {
+        PasscodeCircleView* circleView = [[PasscodeCircleView alloc] init];
+        circleView.size = self.size;
+        circleView.borderWidth = self.borderWidth;
+        circleView.tintColor = self.tintColor;
+        [self addArrangedSubview:circleView];
+    }
+    [self setTintColor:[UIColor blackColor]];
+    self.axis = UILayoutConstraintAxisHorizontal;
+    self.distribution = UIStackViewDistributionEqualSpacing;
+    self.alignment = UIStackViewAlignmentCenter;
+}
 
 @end

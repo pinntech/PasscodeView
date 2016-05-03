@@ -29,6 +29,11 @@ IB_DESIGNABLE
 @interface PasscodeCircleView : UIView
 
 /**
+ *  The size of the circle, which is also its intrinsic content size
+ */
+@property (nonatomic, assign) IBInspectable CGFloat size;
+
+/**
  *  The border width of the circle view
  */
 @property (nonatomic, assign) IBInspectable CGFloat borderWidth;
