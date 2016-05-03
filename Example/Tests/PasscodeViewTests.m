@@ -1,4 +1,4 @@
-// PasscodeView.h
+// PasscodeViewTests.m
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,35 +19,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+@import XCTest;
+#import <PasscodeView/PasscodeView.h>
 
-IB_DESIGNABLE
-/**
- *  A view that displays passcode placeholder circles, which can then be either
- *  filled or unfilled based on a data source. The view can be customized based
- *  on length, tint color, or border width
- */
-@interface PasscodeView : UIStackView
+@interface Tests : XCTestCase
 
-/**
- *  The border width of the passcode circles
- */
-@property (nonatomic, assign) IBInspectable CGFloat borderWidth;
+@end
 
-/**
- *  The length of the passcode entry, tells the view how many circles to draw
- */
-@property (nonatomic, assign) IBInspectable NSUInteger length;
+@implementation Tests
 
-/**
- *  The amount of characters that have been entered, the value can be 0-[length]
- *  where 0 is an empty passcode view and length will fill the passcode view
- */
-@property (nonatomic, assign) IBInspectable NSUInteger progress;
+- (void)setUp
+{
+    [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+}
 
-/**
- *  The size of the circles in the view
- */
-@property (nonatomic, assign) IBInspectable CGFloat size;
+- (void)tearDown
+{
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
+
+//- (void)testExample
+//{
+//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+//}
 
 @end
