@@ -1,4 +1,4 @@
-# PasscodeView
+![Alt text](https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/PasscodeViewExample.gif?raw=true "PNCurrency")
 
 [![Version](https://img.shields.io/cocoapods/v/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
 [![CI Status](https://travis-ci.org/pinnrepo/PasscodeView.svg?branch=master)](https://travis-ci.org/pinnrepo/PasscodeView)

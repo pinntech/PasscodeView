@@ -25,6 +25,8 @@
 @interface PNViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField* textField;
 @property (weak, nonatomic) IBOutlet PasscodeView* passcodeView;
+@property (strong, nonatomic) IBOutlet UIView* toolbarView;
+@property (weak, nonatomic) IBOutlet UIButton* loginButton;
 @end
 
 @implementation PNViewController
@@ -34,6 +36,8 @@
     [super viewDidLoad];
     self.textField.delegate = self;
     [self.textField becomeFirstResponder];
+    self.loginButton.layer.cornerRadius = 6.0f;
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -41,6 +45,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (UIView*)inputAccessoryView
+{
+    return self.toolbarView;
 }
 
 - (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string

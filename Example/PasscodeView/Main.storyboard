@@ -2,7 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="whP-gf-Uak">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-L.ttf">
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+        </mutableArray>
+        <mutableArray key="UbuntuTitling-Bold.ttf">
+            <string>UbuntuTitling-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Login-->
         <scene sceneID="wQg-tq-qST">
@@ -16,68 +26,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalCentering" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KxR-Vd-koH">
-                                <rect key="frame" x="85" y="342" width="150" height="15"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRN-MJ-hfn" customClass="PasscodeCircleView">
-                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="filled" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIt-Ad-5nk" customClass="PasscodeCircleView">
-                                        <rect key="frame" x="46" y="0.0" width="14" height="15"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
-                                                <real key="value" value="14"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcA-eZ-7lZ" customClass="PasscodeCircleView">
-                                        <rect key="frame" x="90" y="0.0" width="15" height="15"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1h-ne-vyb" customClass="PasscodeCircleView">
-                                        <rect key="frame" x="135" y="0.0" width="15" height="15"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FrO-bV-SHY">
-                                <rect key="frame" x="112" y="262" width="97" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FrO-bV-SHY">
+                                <rect key="frame" x="203" y="518" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="pgd-32-xCP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-Ih-Mth" customClass="PasscodeView">
-                                <rect key="frame" x="60" y="117" width="201" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93E-CD-yaw">
+                                <rect key="frame" x="68" y="132" width="185" height="41"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="ZAM-qG-HDH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlJ-fe-xDS">
+                                <rect key="frame" x="117" y="28" width="87" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="V8Y-q9-zx7"/>
+                                    <constraint firstAttribute="height" constant="96" id="kgi-16-q3q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="UbuntuTitling-Bold" family="Ubuntu Titling" pointSize="64"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-Ih-Mth" customClass="PasscodeView">
+                                <rect key="frame" x="60" y="181" width="201" height="17"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="1lh-SK-SQa"/>
+                                    <constraint firstAttribute="height" constant="17" id="eTb-9u-9F5"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1.5"/>
@@ -96,23 +79,49 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93E-CD-yaw">
-                                <rect key="frame" x="68" y="58" width="185" height="29"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="21"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FrO-bV-SHY" secondAttribute="bottom" constant="20" symbolic="YES" id="0vl-aB-NwO"/>
+                            <constraint firstItem="wlJ-fe-xDS" firstAttribute="centerX" secondItem="93E-CD-yaw" secondAttribute="centerX" id="12f-6E-RIe"/>
+                            <constraint firstItem="GUE-Ih-Mth" firstAttribute="top" secondItem="93E-CD-yaw" secondAttribute="bottom" constant="8" id="82x-Y3-Zdg"/>
+                            <constraint firstItem="wlJ-fe-xDS" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="HYe-Gw-c4A"/>
+                            <constraint firstItem="93E-CD-yaw" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="52" id="VTk-pT-Nw0"/>
+                            <constraint firstItem="GUE-Ih-Mth" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="WhP-st-uvc"/>
+                            <constraint firstItem="wlJ-fe-xDS" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="8" symbolic="YES" id="ddk-6U-VnF"/>
+                            <constraint firstItem="93E-CD-yaw" firstAttribute="top" secondItem="wlJ-fe-xDS" secondAttribute="bottom" constant="8" symbolic="YES" id="hj4-lL-P6A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FrO-bV-SHY" secondAttribute="trailing" constant="4" id="oLC-yI-x80"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="Y9k-LA-gD8"/>
                     <connections>
+                        <outlet property="loginButton" destination="UZS-nq-oiN" id="jxq-Ky-BZs"/>
                         <outlet property="passcodeView" destination="GUE-Ih-Mth" id="3Dd-zc-J6p"/>
                         <outlet property="textField" destination="FrO-bV-SHY" id="fIl-2S-pVX"/>
+                        <outlet property="toolbarView" destination="hBR-0t-kdz" id="9RE-rw-1ra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="hBR-0t-kdz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-nq-oiN">
+                            <rect key="frame" x="23" y="14" width="275" height="42"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="14"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="centerY" secondItem="hBR-0t-kdz" secondAttribute="centerY" id="AOK-Br-9og"/>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="centerX" secondItem="hBR-0t-kdz" secondAttribute="centerX" id="F3X-hd-VqA"/>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="leading" secondItem="hBR-0t-kdz" secondAttribute="leading" constant="23" id="XUw-4J-GQO"/>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="top" secondItem="hBR-0t-kdz" secondAttribute="top" constant="14" id="awc-4z-vMH"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="694" y="409"/>
         </scene>
