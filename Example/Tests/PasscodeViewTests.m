@@ -40,9 +40,10 @@
     [super tearDown];
 }
 
-//- (void)testExample
-//{
-//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-//}
+- (void)testPasscodeViewShouldInit
+{
+    PasscodeView* passcodeView = [[PasscodeView alloc] initWithFrame:CGRectMake(0, 0, 30, 300)];
+    XCTAssertNotNil(passcodeView);
+}
 
 @end
