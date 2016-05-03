@@ -22,11 +22,11 @@
 @import XCTest;
 #import <PasscodeView/PasscodeView.h>
 
-@interface Tests : XCTestCase
+@interface PasscodeViewTests : XCTestCase
 
 @end
 
-@implementation Tests
+@implementation PasscodeViewTests
 
 - (void)setUp
 {
