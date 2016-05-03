@@ -12,7 +12,9 @@ the iOS 7+ unlock screen. It is easy to use and best of all fully IBDesignable
 and IBInspectable. That is you can fully configure the look and feel of your
 custom PasscodeView in seconds.
 
-![Alt text](https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/PasscodeViewExample.gif)
+<p align="center">
+<img src="https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/PasscodeViewExample.gif">
+</p>
 
 ### Table of Contents
 ---------------------
