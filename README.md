@@ -1,11 +1,13 @@
 ![Alt text](https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/logo.png?raw=true "PasscodeView")
 
-[![Version](https://img.shields.io/cocoapods/v/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
-[![CI Status](https://travis-ci.org/pinnrepo/PasscodeView.svg?branch=master)](https://travis-ci.org/pinnrepo/PasscodeView)
-[![Doc Coverage](https://img.shields.io/cocoapods/metrics/doc-percent/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
-[![License](https://img.shields.io/cocoapods/l/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
-[![Platform](https://img.shields.io/cocoapods/p/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
-[![Language](https://img.shields.io/badge/language-objective--c-lightgrey.svg)](http://cocoapods.org/pods/PasscodeView)
+<p align="center">
+<img src="https://img.shields.io/cocoapods/v/PasscodeView.svg?style=flat">
+<img src="https://travis-ci.org/pinnrepo/PasscodeView.svg?branch=master">
+<img src="https://img.shields.io/cocoapods/metrics/doc-percent/PasscodeView.svg?style=flat">
+<img src="https://img.shields.io/cocoapods/l/PasscodeView.svg?style=flat">
+<img src="https://img.shields.io/cocoapods/p/PasscodeView.svg?style=flat">
+<img src="https://img.shields.io/badge/language-objective--c-lightgrey.svg">
+</p>
 
 PasscodeView is an input view for secure passcode entry, and is inspired from 
 the iOS 7+ unlock screen. It is easy to use and best of all fully IBDesignable
