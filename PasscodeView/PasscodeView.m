@@ -93,7 +93,6 @@
         circleView.tintColor = self.tintColor;
         [self addArrangedSubview:circleView];
     }
-    [self setTintColor:[UIColor blackColor]];
     self.axis = UILayoutConstraintAxisHorizontal;
     self.distribution = UIStackViewDistributionEqualSpacing;
     self.alignment = UIStackViewAlignmentCenter;
