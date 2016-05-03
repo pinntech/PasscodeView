@@ -1,4 +1,4 @@
-![Alt text](https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/PasscodeViewExample.gif)
+![Alt text](https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/logo.png?raw=true "PasscodeView")
 
 [![Version](https://img.shields.io/cocoapods/v/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
 [![CI Status](https://travis-ci.org/pinnrepo/PasscodeView.svg?branch=master)](https://travis-ci.org/pinnrepo/PasscodeView)
@@ -11,6 +11,8 @@ PasscodeView is an input view for secure passcode entry, and is inspired from
 the iOS 7+ unlock screen. It is easy to use and best of all fully IBDesignable
 and IBInspectable. That is you can fully configure the look and feel of your
 custom PasscodeView in seconds.
+
+![Alt text](https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/PasscodeViewExample.gif)
 
 ### Table of Contents
 ---------------------
