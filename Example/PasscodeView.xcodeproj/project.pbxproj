@@ -16,6 +16,7 @@
 		279B2E1C1CD8AA6B007C2AA0 /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 279B2E141CD8AA6B007C2AA0 /* Ubuntu-MI.ttf */; };
 		279B2E1D1CD8AA6B007C2AA0 /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 279B2E151CD8AA6B007C2AA0 /* Ubuntu-R.ttf */; };
 		279B2E1E1CD8AA6B007C2AA0 /* Ubuntu-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 279B2E161CD8AA6B007C2AA0 /* Ubuntu-RI.ttf */; };
+		279B2E201CD9E059007C2AA0 /* PasscodeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 279B2E1F1CD9E059007C2AA0 /* PasscodeViewTests.m */; };
 		27C667181CD80FB20060C1B1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C667171CD80FB20060C1B1 /* Launch Screen.storyboard */; };
 		2DE87D71D330C4AB1E09BB71 /* Pods_PasscodeView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CCF79D495E5122D7723726 /* Pods_PasscodeView_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -57,6 +58,7 @@
 		279B2E141CD8AA6B007C2AA0 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
 		279B2E151CD8AA6B007C2AA0 /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
 		279B2E161CD8AA6B007C2AA0 /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-RI.ttf"; sourceTree = "<group>"; };
+		279B2E1F1CD9E059007C2AA0 /* PasscodeViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasscodeViewTests.m; sourceTree = "<group>"; };
 		27C667171CD80FB20060C1B1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4A2137112740DE1C1FA69E55 /* Pods-PasscodeView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasscodeView_Tests/Pods-PasscodeView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5116F73C174F6C9DCC5BE422 /* Pods-PasscodeView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasscodeView_Example/Pods-PasscodeView_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				279B2E1F1CD9E059007C2AA0 /* PasscodeViewTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279B2E201CD9E059007C2AA0 /* PasscodeViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
