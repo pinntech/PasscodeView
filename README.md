@@ -23,7 +23,6 @@ custom PasscodeView in seconds right in interface builder.
 
 * [Features](#features)
 * [Installation](#installation)
-* [Interface](#interface)
 * [Usage](#usage)
 * [Example](#example)
 * [Documentation](#documentation)
@@ -72,18 +71,6 @@ then simply add the files to your project, and use a local import header
 #import "PasscodeView.h"
 ```
 
-### Interface
--------------
-
-Heres a quick run down of all configurable properties and methods
-
-#### PasscodeView
-------------------
-
-###### Methods
-```objc
-```
-
 ### Usage
 ---------
 
@@ -96,6 +83,8 @@ storyboard attributes editor (or do it in code!). Next you will want to
 create an IBOutlet for your PasscodeView instance.
 
 ```objc
+# Now you can configure more or just update the update the progress when needed
+self.passcodeView.progress = passwordString.length;
 ```
 
 ##### Programmatically
@@ -107,7 +96,11 @@ to go!
 PasscodeView *passcodeView = [[PasscodeView alloc] initWithFrame:CGRectMake(100,100,200,200)];
 passcodeView.borderWidth = 2.0f;
 passcodeView.size = 15.0f;
+passcodeView.length = 6;
 [self.view addSubview:passcodeView];
+
+# Some time later... update the progress value
+passcodeView.progress = passcodeString.length;
 ```
 
 ### Example
@@ -116,7 +109,7 @@ passcodeView.size = 15.0f;
 Running the example app is easy and helpful to see how PasscodeView works.
 
 1. Clone the repository - `git clone https://github.com/pinnrepo/PasscodeView.git`
-2. Open the workspace - `open Example/SlotLabel.xcworkspace`
+2. Open the workspace - `open Example/PasscodeView.xcworkspace`
 3. Compile and run for simulator or device
 
 ### Documentation
