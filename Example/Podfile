@@ -1,3 +1,4 @@
+platform :ios, '9.0'
 use_frameworks!
 
 target 'PasscodeView_Example', :exclusive => true do
@@ -6,6 +7,5 @@ end
 
 target 'PasscodeView_Tests', :exclusive => true do
   pod 'PasscodeView', :path => '../'
-
   
 end

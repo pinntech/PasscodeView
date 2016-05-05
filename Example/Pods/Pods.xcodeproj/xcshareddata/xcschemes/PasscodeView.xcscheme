@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EAD0B449C1BA0F4A2E74ABC6'
+               BlueprintIdentifier = 'BE1D46B278CD8C42DF3FE652'
                BlueprintName = 'PasscodeView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'PasscodeView.framework'>

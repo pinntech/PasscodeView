@@ -1,4 +1,4 @@
-// PasscodeCircleView.h
+// CircleView.h
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@ IB_DESIGNABLE
  *  A UI element which simply draws a circle, it can either be filled which is
  *  a solid circle, or unfilled which is a circle with a border.
  */
-@interface PasscodeCircleView : UIView
+@interface CircleView : UIView
 
 /**
  *  The size of the circle, which is also its intrinsic content size

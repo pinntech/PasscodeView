@@ -1,4 +1,4 @@
-// PasscodeCircleView.m
+// CircleView.m
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,7 +21,7 @@
 
 #import "PasscodeCircleView.h"
 
-@implementation PasscodeCircleView {
+@implementation CircleView {
     UIView* circleView;
 }
 

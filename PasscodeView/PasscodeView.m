@@ -49,7 +49,7 @@
 - (void)setSize:(CGFloat)size
 {
     _size = size;
-    for (PasscodeCircleView* circleView in self.arrangedSubviews) {
+    for (CircleView* circleView in self.arrangedSubviews) {
         circleView.size = size;
     }
 }
@@ -57,7 +57,7 @@
 - (void)setTintColor:(UIColor*)tintColor
 {
     [super setTintColor:tintColor];
-    for (PasscodeCircleView* circleView in self.arrangedSubviews) {
+    for (CircleView* circleView in self.arrangedSubviews) {
         circleView.tintColor = tintColor;
     }
 }
@@ -65,7 +65,7 @@
 - (void)setBorderWidth:(CGFloat)borderWidth
 {
     _borderWidth = borderWidth;
-    for (PasscodeCircleView* circleView in self.arrangedSubviews) {
+    for (CircleView* circleView in self.arrangedSubviews) {
         circleView.borderWidth = borderWidth;
     }
 }
@@ -78,7 +78,7 @@
         [subview removeFromSuperview];
     }
     for (NSUInteger i = 0; i < length; i++) {
-        PasscodeCircleView* circleView = [[PasscodeCircleView alloc] initWithFrame:CGRectMake(0, 0, self.size, self.size)];
+        CircleView* circleView = [[CircleView alloc] initWithFrame:CGRectMake(0, 0, self.size, self.size)];
         circleView.size = self.size;
         circleView.borderWidth = self.borderWidth;
         circleView.tintColor = self.tintColor;
@@ -106,7 +106,7 @@
 - (void)baseInit
 {
     for (NSUInteger i = 0; i < self.length; i++) {
-        PasscodeCircleView* circleView = [[PasscodeCircleView alloc] init];
+        CircleView* circleView = [[CircleView alloc] init];
         circleView.size = self.size;
         circleView.borderWidth = self.borderWidth;
         circleView.tintColor = self.tintColor;
