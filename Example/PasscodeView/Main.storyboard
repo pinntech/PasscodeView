@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-L.ttf">
+            <string>Ubuntu-Light</string>
+        </array>
+        <array key="UbuntuTitling-Bold.ttf">
+            <string>UbuntuTitling-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="wQg-tq-qST">
+            <objects>
+                <viewController id="whP-gf-Uak" customClass="PNViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FrO-bV-SHY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="pgd-32-xCP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93E-CD-yaw">
+                                <color key="tintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="ZAM-qG-HDH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pv" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlJ-fe-xDS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="V8Y-q9-zx7"/>
+                                    <constraint firstAttribute="height" constant="96" id="kgi-16-q3q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="UbuntuTitling-Bold" family="Ubuntu Titling" pointSize="64"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-Ih-Mth" customClass="PasscodeView">
+                                <color key="tintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="1lh-SK-SQa"/>
+                                    <constraint firstAttribute="height" constant="17" id="eTb-9u-9F5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FrO-bV-SHY" secondAttribute="bottom" constant="20" symbolic="YES" id="0vl-aB-NwO"/>
+                            <constraint firstItem="wlJ-fe-xDS" firstAttribute="centerX" secondItem="93E-CD-yaw" secondAttribute="centerX" id="12f-6E-RIe"/>
+                            <constraint firstItem="GUE-Ih-Mth" firstAttribute="top" secondItem="93E-CD-yaw" secondAttribute="bottom" constant="8" id="82x-Y3-Zdg"/>
+                            <constraint firstItem="wlJ-fe-xDS" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="HYe-Gw-c4A"/>
+                            <constraint firstItem="93E-CD-yaw" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="52" id="VTk-pT-Nw0"/>
+                            <constraint firstItem="GUE-Ih-Mth" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="WhP-st-uvc"/>
+                            <constraint firstItem="wlJ-fe-xDS" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="8" symbolic="YES" id="ddk-6U-VnF"/>
+                            <constraint firstItem="93E-CD-yaw" firstAttribute="top" secondItem="wlJ-fe-xDS" secondAttribute="bottom" constant="8" symbolic="YES" id="hj4-lL-P6A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FrO-bV-SHY" secondAttribute="trailing" constant="4" id="oLC-yI-x80"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="Y9k-LA-gD8"/>
+                    <connections>
+                        <outlet property="loginButton" destination="UZS-nq-oiN" id="jxq-Ky-BZs"/>
+                        <outlet property="passcodeView" destination="GUE-Ih-Mth" id="3Dd-zc-J6p"/>
+                        <outlet property="textField" destination="FrO-bV-SHY" id="fIl-2S-pVX"/>
+                        <outlet property="toolbarView" destination="hBR-0t-kdz" id="9RE-rw-1ra"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="hBR-0t-kdz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-nq-oiN">
+                            <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="14"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="centerY" secondItem="hBR-0t-kdz" secondAttribute="centerY" id="AOK-Br-9og"/>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="centerX" secondItem="hBR-0t-kdz" secondAttribute="centerX" id="F3X-hd-VqA"/>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="leading" secondItem="hBR-0t-kdz" secondAttribute="leading" constant="23" id="XUw-4J-GQO"/>
+                        <constraint firstItem="UZS-nq-oiN" firstAttribute="top" secondItem="hBR-0t-kdz" secondAttribute="top" constant="14" id="awc-4z-vMH"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="694" y="409"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
