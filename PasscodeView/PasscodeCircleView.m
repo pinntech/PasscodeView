@@ -71,10 +71,14 @@
 {
     _filled = filled;
     if (filled) {
-        circleView.backgroundColor = self.tintColor;
+        [UIView animateWithDuration:self.animationDuration animations:^{
+            circleView.layer.backgroundColor = self.tintColor.CGColor;
+        }];
     }
     else {
-        circleView.backgroundColor = [UIColor clearColor];
+        [UIView animateWithDuration:self.animationDuration animations:^{
+            circleView.layer.backgroundColor = [UIColor clearColor].CGColor;
+        }];
     }
 }
 
@@ -106,6 +110,7 @@
 - (void)baseInit
 {
     self.filled = NO;
+    self.animationDuration = 0.0f;
 
     circleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.size, self.size)];
     [circleView setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];

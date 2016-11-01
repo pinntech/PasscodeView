@@ -50,4 +50,9 @@ IB_DESIGNABLE
  */
 @property (nonatomic, assign) IBInspectable CGFloat size;
 
+/**
+ *  Duration that the fill/unfill animation is done for, 0 by default
+ */
+@property (nonatomic, assign) IBInspectable CGFloat animationDuration;
+
 @end

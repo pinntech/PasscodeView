@@ -70,6 +70,13 @@
     }
 }
 
+- (void)setAnimationDuration:(CGFloat)animationDuration {
+    _animationDuration = animationDuration;
+    for (CircleView* circleView in self.arrangedSubviews) {
+        circleView.animationDuration = animationDuration;
+    }
+}
+
 - (void)setLength:(NSUInteger)length
 {
     _length = length;
@@ -110,6 +117,7 @@
         circleView.size = self.size;
         circleView.borderWidth = self.borderWidth;
         circleView.tintColor = self.tintColor;
+        circleView.animationDuration = 0;
         [self addArrangedSubview:circleView];
         [circleViews addObject:circleView];
     }
