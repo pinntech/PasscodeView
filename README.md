@@ -2,7 +2,7 @@
 ------------------------------------------------------------------------------------------------------------
 
 [![Version](https://img.shields.io/cocoapods/v/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
-[![CI Status](https://travis-ci.org/pinntech/PasscodeView.svg?branch=master)](https://travis-ci.org/pinnrepo/PasscodeView)
+[![CI Status](https://travis-ci.org/pinntech/PasscodeView.svg?branch=master)](https://travis-ci.org/pinntech/PasscodeView)
 [![Doc Coverage](https://img.shields.io/cocoapods/metrics/doc-percent/PasscodeView.svg)](http://cocoapods.org/pods/PasscodeView)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://en.wikipedia.org/wiki/MIT_License)
 [![Platform](https://img.shields.io/cocoapods/p/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
