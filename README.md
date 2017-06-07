@@ -1,8 +1,8 @@
-![Alt text](https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/logo.png?raw=true "PasscodeView")
+![Alt text](https://raw.githubusercontent.com/pinntech/PasscodeView/master/logo.png?raw=true "PasscodeView")
 ------------------------------------------------------------------------------------------------------------
 
 [![Version](https://img.shields.io/cocoapods/v/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
-[![CI Status](https://travis-ci.org/pinnrepo/PasscodeView.svg?branch=master)](https://travis-ci.org/pinnrepo/PasscodeView)
+[![CI Status](https://travis-ci.org/pinntech/PasscodeView.svg?branch=master)](https://travis-ci.org/pinnrepo/PasscodeView)
 [![Doc Coverage](https://img.shields.io/cocoapods/metrics/doc-percent/PasscodeView.svg)](http://cocoapods.org/pods/PasscodeView)
 [![License](https://img.shields.io/cocoapods/l/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
 [![Platform](https://img.shields.io/cocoapods/p/PasscodeView.svg?style=flat)](http://cocoapods.org/pods/PasscodeView)
@@ -14,7 +14,7 @@ and IBInspectable. That is you can fully configure the look and feel of your
 custom PasscodeView in seconds right in interface builder.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/pinnrepo/PasscodeView/master/PasscodeViewExample.gif">
+<img src="https://raw.githubusercontent.com/pinntech/PasscodeView/master/PasscodeViewExample.gif">
 </p>
 
 ### Table of Contents
@@ -61,7 +61,7 @@ Now you can add to your project with
 You can clone the repo with git:
 
 ```
-git clone https://github.com/pinnrepo/PasscodeView.git
+git clone https://github.com/pinntech/PasscodeView.git
 ```
 
 then simply add the files to your project, and use a local import header
@@ -107,7 +107,7 @@ passcodeView.progress = passcodeString.length;
 
 Running the example app is easy and helpful to see how PasscodeView works.
 
-1. Clone the repository - `git clone https://github.com/pinnrepo/PasscodeView.git`
+1. Clone the repository - `git clone https://github.com/pinntech/PasscodeView.git`
 2. Open the workspace - `open Example/PasscodeView.xcworkspace`
 3. Compile and run for simulator or device
 
@@ -132,7 +132,7 @@ Got a great idea and want to contribute? Here's how you can help...
 ### History
 -----------
 
-For complete release notes check out the [changelog](https://github.com/pinnrepo/PasscodeView/blob/master/CHANGELOG.md)
+For complete release notes check out the [changelog](https://github.com/pinntech/PasscodeView/blob/master/CHANGELOG.md)
 
 ### Roadmap
 -----------
